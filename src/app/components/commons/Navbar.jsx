@@ -37,8 +37,8 @@ const Navbar = () => {
   };
 
   const handleServiceDropdownItemClick = () => {
-    // For desktop, just close the dropdown
     setDropdownOpen(false);
+    setMenuOpen(false); // ✅ close mobile menu if open
   };
 
   const services = [
