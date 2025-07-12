@@ -47,9 +47,7 @@ const SEOServicesPage = () => {
           <div className="relative p-6 bg-gray-900 rounded-xl shadow-lg border border-gray-800 order-2 md:order-1">
             {/* Placeholder for an SVG or image representing a graph or rising arrow */}
             <div className="flex justify-center items-center h-48 bg-gray-800 rounded-lg">
-              <span className="text-5xl text-emerald-500">
-                [GROWTH_CHART_SVG]
-              </span>
+              <img src="/servicesimages/seo.jpeg" />
             </div>
             <p className="mt-4 text-center text-gray-500 text-sm">
               *Illustration: Visualize your growth with our data-driven SEO

@@ -159,7 +159,7 @@ const UIDesigningPage = () => {
           <div className="relative p-6 bg-gray-900 rounded-xl shadow-lg border border-gray-800">
             {/* Placeholder for an image of a well-designed app screen or a hand holding a device */}
             <div className="flex justify-center items-center h-64 bg-gray-800 rounded-lg">
-              <span className="text-5xl text-violet-500">[APP_SCREEN_SVG]</span>
+              <img src="/servicesimages/uiux.jpeg" />
             </div>
             <p className="mt-4 text-center text-gray-500 text-sm">
               *Illustration: Intuitive design for a seamless user journey.*

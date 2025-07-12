@@ -65,9 +65,7 @@ const DigitalMarketingPage = () => {
           <div className="relative p-6 bg-gray-900 rounded-xl shadow-lg border border-gray-800">
             {/* Placeholder for an image of analytics dashboard or a target with arrows */}
             <div className="flex justify-center items-center h-48 bg-gray-800 rounded-lg">
-              <span className="text-5xl text-indigo-500">
-                [ANALYTICS_DASHBOARD_SVG]
-              </span>
+              <img src="/servicesimages/marketing.jpeg" />
             </div>
             <p className="mt-4 text-center text-gray-500 text-sm">
               *Illustration: Data-driven insights leading to optimal campaign

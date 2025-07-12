@@ -47,7 +47,7 @@ const CustomDigitalSolutionsPage = () => {
           <div className="relative p-6 bg-gray-900 rounded-xl shadow-lg border border-gray-800 order-2 md:order-1">
             {/* Placeholder for an image of gears, puzzle pieces, or a blueprint */}
             <div className="flex justify-center items-center h-48 bg-gray-800 rounded-lg">
-              <span className="text-5xl text-teal-500">[PUZZLE_SOLVE_SVG]</span>
+              <img src="/servicesimages/customsolutions.jpeg" />
             </div>
             <p className="mt-4 text-center text-gray-500 text-sm">
               *Illustration: Crafting unique solutions for complex challenges.*

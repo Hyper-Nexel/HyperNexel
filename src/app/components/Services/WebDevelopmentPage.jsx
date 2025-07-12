@@ -62,7 +62,7 @@ const WebDevelopmentPage = () => {
           <div className="relative p-6 bg-gray-900 rounded-xl shadow-lg border border-gray-800">
             {/* Placeholder for an SVG or image representing a development process flow */}
             <div className="flex justify-center items-center h-48 bg-gray-800 rounded-lg">
-              <span className="text-5xl text-red-500">[CODE_FLOW_SVG]</span>
+              <img src="/servicesimages/web-dev.jpeg" />
             </div>
             <p className="mt-4 text-center text-gray-500 text-sm">
               *Illustration: Our streamlined development process ensures

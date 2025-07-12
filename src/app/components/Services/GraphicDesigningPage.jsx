@@ -65,7 +65,7 @@ const GraphicDesigningPage = () => {
           <div className="relative p-6 bg-gray-900 rounded-xl shadow-lg border border-gray-800">
             {/* Placeholder for an image of a brand style guide or a mock-up of a well-designed product */}
             <div className="flex justify-center items-center h-48 bg-gray-800 rounded-lg">
-              <span className="text-5xl text-pink-500">[BRAND_MOCKUP_SVG]</span>
+              <img src="/servicesimages/graphicdesign.jpeg" />
             </div>
             <p className="mt-4 text-center text-gray-500 text-sm">
               *Illustration: Your brand's distinct visual voice brought to
