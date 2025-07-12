@@ -3,11 +3,14 @@ import React from "react";
 
 const AboutUsHero = () => {
   return (
-    <section className="relative min-h-[70vh] flex items-center justify-center bg-black text-gray-200 overflow-hidden px-6 md:px-12 py-20">
+    <section className="relative min-h-[100vh] flex items-center justify-center bg-black text-gray-200 overflow-hidden px-6 md:px-12 py-20">
       {/* Background Visuals: Subtle, Animated Gold Gradient */}
       <div className="absolute inset-0 z-0 opacity-40">
-        <div className="absolute inset-0 animate-gradient-xy bg-gradient-to-br from-gray-900 via-amber-900 to-black" />
-        <div className="absolute inset-0 bg-black/70 backdrop-blur-md" />{" "}
+        <img
+          src="/heroimages/about-hero.png"
+          alt="Hero Background"
+          className="w-full h-full object-cover object-center opacity-80"
+        />
         {/* Increased blur for depth */}
       </div>
 

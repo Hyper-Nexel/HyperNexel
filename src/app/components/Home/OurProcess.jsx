@@ -26,7 +26,7 @@ const steps = [
 
 const OurProcess = () => {
   return (
-    <section className="relative bg-gray-950 text-white py-20 md:py-28 px-6 sm:px-10 lg:px-16 overflow-hidden">
+    <section className="relative bg-gray-950 text-white py-10 px-6 sm:px-10 lg:px-16 overflow-hidden">
       {/* Optional: Subtle Background Gradients/Shapes for depth */}
       <div className="absolute inset-0 opacity-20 z-0">
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob animation-delay-3000" />

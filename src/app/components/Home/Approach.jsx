@@ -35,7 +35,7 @@ const approachCards = [
 
 const Approach = () => {
   return (
-    <section className="relative bg-gray-950 text-white py-16 md:py-24 px-6 sm:px-10 lg:px-16 overflow-hidden">
+    <section className="relative bg-gray-950 text-white py-16 md:py-10 px-6 sm:px-10 lg:px-16 overflow-hidden">
       {/* Optional: Subtle Background Gradients/Shapes for depth - can be reused from Services or new ones */}
       <div className="absolute inset-0 opacity-20 z-0">
         <div className="absolute bottom-0 left-1/3 w-80 h-80 bg-cyan-500 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob animation-delay-4000" />

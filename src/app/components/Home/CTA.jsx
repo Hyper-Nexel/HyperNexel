@@ -4,7 +4,7 @@ const CTA = () => {
   return (
     <section
       id="contact"
-      className="relative py-20 md:py-28 bg-gray-950 text-white overflow-hidden px-6 sm:px-10 lg:px-16"
+      className="relative py-10 md:py-10 bg-gray-950 text-white overflow-hidden px-6 sm:px-10 lg:px-16"
     >
       {/* Background Gradients/Shapes for depth */}
       <div className="absolute inset-0 opacity-40 z-0">
