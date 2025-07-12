@@ -71,10 +71,11 @@ const Approach = () => {
                 <div className="absolute inset-px rounded-2xl bg-gradient-to-br from-cyan-500 via-violet-600 to-indigo-700 blur-sm" />
               </div>
 
-              <h3 className="relative z-10 text-xl font-bold text-white mb-3 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-cyan-300 group-hover:to-violet-500 transition-all duration-300">
+              <h3 className="relative z-10 text-xl font-bold text-white mb-3 transition-all duration-300 group-hover:text-cyan-300">
                 {card.title}
               </h3>
-              <p className="relative z-10 text-base text-gray-400 leading-relaxed flex-grow">
+
+              <p className="relative z-10 text-base text-gray-400 group-hover:text-white leading-relaxed flex-grow">
                 {card.description}
               </p>
             </div>
