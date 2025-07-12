@@ -7,15 +7,13 @@ const VideoProductionPage = () => {
       {/* Hero Section: Cinematic Impact */}
       <section className="relative py-28 md:py-40 px-6 sm:px-10 lg:px-16 flex items-center justify-center text-center overflow-hidden">
         {/* Background Image/SVG: Abstract film strips, light rays, or camera lens */}
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{
-            backgroundImage: 'url("/assets/service-hero/video-prod-bg.jpg")',
-            backgroundPosition: "center 60%",
-          }} // Placeholder: replace with a video production themed image
-        >
+        <div className="absolute h-[100vh] inset-0 bg-cover bg-center">
           {/* Overlay for readability */}
-          <div className="absolute inset-0 bg-gradient-to-t from-black via-black/70 to-transparent" />
+          <img
+            src="/heroimages/video-production-hero.jpg"
+            alt="Hero Background"
+            className="w-full h-full object-cover object-center opacity-40"
+          />{" "}
         </div>
 
         <div className="relative z-10 max-w-4xl mx-auto space-y-6">

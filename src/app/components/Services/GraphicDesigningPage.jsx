@@ -7,16 +7,13 @@ const GraphicDesigningPage = () => {
       {/* Hero Section: Canvas of Creativity */}
       <section className="relative py-28 md:py-40 px-6 sm:px-10 lg:px-16 flex items-center justify-center text-center overflow-hidden">
         {/* Background Image/SVG: Artistic brush strokes, abstract shapes, or a designer's desk */}
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{
-            backgroundImage:
-              'url("/assets/service-hero/graphic-design-bg.jpg")', // Placeholder: replace with a graphic design themed image
-            backgroundPosition: "center",
-          }}
-        >
+        <div className="absolute h-[100vh] inset-0 bg-cover bg-center">
           {/* Overlay for readability */}
-          <div className="absolute inset-0 bg-gradient-to-t from-black via-black/70 to-transparent" />
+          <img
+            src="/heroimages/graphic-designing-hero.jpg"
+            alt="Hero Background"
+            className="w-full h-full object-cover object-center opacity-40"
+          />{" "}
         </div>
 
         <div className="relative z-10 max-w-4xl mx-auto space-y-6">

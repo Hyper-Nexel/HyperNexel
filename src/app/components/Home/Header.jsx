@@ -2,13 +2,15 @@ import React from "react";
 
 const Header = () => {
   return (
-    <header className="relative min-h-screen flex items-center justify-center bg-gray-950 text-white overflow-hidden p-6 md:p-12">
+    <header className="relative h-[100vh] flex items-center justify-center bg-gray-950 text-white overflow-hidden">
       {/* Background Visuals */}
       <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-gradient-to-br from-purple-800 via-indigo-900 to-black animate-gradient-xy opacity-40" />
-        <div className="absolute inset-0 bg-black/60 backdrop-blur-md" />
+        <img
+          src="/heroimages/landing-page-hero.jpg"
+          alt="Hero Background"
+          className="w-full h-full object-cover object-center opacity-40"
+        />
       </div>
-
       {/* Content */}
       <div className="relative z-10 text-center max-w-5xl mx-auto space-y-10">
         {/* Title */}

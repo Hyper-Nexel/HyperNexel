@@ -7,16 +7,13 @@ const CustomDigitalSolutionsPage = () => {
       {/* Hero Section: Bespoke Innovation */}
       <section className="relative py-28 md:py-40 px-6 sm:px-10 lg:px-16 flex items-center justify-center text-center overflow-hidden">
         {/* Background Image/SVG: Abstract circuit board, interconnected nodes, or a complex puzzle being solved */}
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{
-            backgroundImage:
-              'url("/assets/service-hero/custom-solutions-bg.jpg")', // Placeholder: replace with a custom solutions themed image
-            backgroundPosition: "center",
-          }}
-        >
+        <div className="absolute -h-[100vh] inset-0 bg-cover bg-center">
           {/* Overlay for readability */}
-          <div className="absolute inset-0 bg-gradient-to-t from-black via-black/70 to-transparent" />
+          <img
+            src="/heroimages/custom-solutions-hero.jpg"
+            alt="Hero Background"
+            className="w-full h-full object-cover object-center opacity-40"
+          />{" "}
         </div>
 
         <div className="relative z-10 max-w-4xl mx-auto space-y-6">

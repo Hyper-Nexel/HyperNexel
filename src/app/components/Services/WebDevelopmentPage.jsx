@@ -7,15 +7,13 @@ const WebDevelopmentPage = () => {
       {/* Hero Section: Code & Creativity */}
       <section className="relative py-28 md:py-40 px-6 sm:px-10 lg:px-16 flex items-center justify-center text-center overflow-hidden">
         {/* Background Image/SVG: Abstract Code or Network */}
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{
-            backgroundImage: 'url("/assets/service-hero/web-dev-bg.jpg")',
-            backgroundPosition: "center 20%",
-          }} // Placeholder: replace with a tech-themed image
-        >
+        <div className="absolute h-[100vh] inset-0 bg-cover bg-center">
           {/* Overlay for readability */}
-          <div className="absolute inset-0 bg-gradient-to-t from-black via-black/70 to-transparent" />
+          <img
+            src="/heroimages/web-development-hero.jpg"
+            alt="Hero Background"
+            className="w-full h-full object-cover object-center opacity-50"
+          />{" "}
         </div>
 
         <div className="relative z-10 max-w-4xl mx-auto space-y-6">
