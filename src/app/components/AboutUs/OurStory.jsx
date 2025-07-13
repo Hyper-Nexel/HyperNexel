@@ -14,7 +14,7 @@ const OurStory = () => {
         {/* Image/Visual Column */}
         <div className="order-2 lg:order-1 relative rounded-2xl overflow-hidden shadow-2xl group">
           <img
-            src="/assets/about/our-story.jpeg" // Replace with your image
+            src="/servicesimages/about-img.jpeg"
             alt="Our Story at Hyper Nexel"
             className="w-full h-80 md:h-96 object-cover transform group-hover:scale-105 transition-transform duration-500 ease-in-out"
           />

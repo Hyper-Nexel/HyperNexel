@@ -17,7 +17,7 @@ const AboutUsParent = () => {
       <AboutUsHero />
       <OurStory />
       <OurValues />
-      <MeetTheTeam />
+      {/* <MeetTheTeam /> */}
       <WhyChooseUs />
       <Milestone />
       <AboutUsCTASection />

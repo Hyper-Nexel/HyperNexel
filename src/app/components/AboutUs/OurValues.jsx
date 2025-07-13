@@ -80,7 +80,7 @@ const OurValues = () => {
               <h3 className="relative z-10 text-xl font-bold text-gray-100 mb-3 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-amber-200 group-hover:to-yellow-400 transition-all duration-300">
                 {value.title}
               </h3>
-              <p className="relative z-10 text-base text-gray-400 leading-relaxed flex-grow">
+              <p className="relative z-10 text-base text-gray-400 group-hover:text-white leading-relaxed flex-grow">
                 {value.description}
               </p>
             </div>

@@ -42,7 +42,7 @@ const AboutUsCTASection = () => {
           >
             View Our Work
             {/* Placeholder Eye Icon */}
-            <span className="ml-3 text-2xl">[👁️]</span>
+            <span className="ml-3 text-2xl">[]</span>
           </a>
         </div>
       </div>
