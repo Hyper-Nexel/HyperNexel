@@ -152,26 +152,28 @@ const Navbar = () => {
 							</div>
 
 							{/* Desktop Services Dropdown */}
-							<ul
-								className={`absolute top-full -left-4 mt-4 bg-gray-950/80 backdrop-blur-xl border border-white/10 shadow-2xl rounded-xl p-3 w-64 transition-all duration-300 z-50
+							<div
+								className={`absolute top-full -left-4 pt-6 w-64 transition-all duration-300 z-50
                 ${
 							desktopDropdownOpen
-								? "opacity-100 pointer-events-auto"
-								: "opacity-0 pointer-events-none"
+								? "opacity-100 pointer-events-auto translate-y-0"
+								: "opacity-0 pointer-events-none -translate-y-2"
 						}`}
 							>
-								{services.map(({ label, href }, i) => (
-									<li key={i}>
-										<Link
-											href={href}
-											className="block px-4 py-2 hover:bg-white/5 hover:text-blue-400 rounded-lg transition-colors text-sm text-gray-200"
-											onClick={closeDesktopDropdown}
-										>
-											{label}
-										</Link>
-									</li>
-								))}
-							</ul>
+								<ul className="bg-gray-950/80 backdrop-blur-xl border border-white/10 shadow-2xl rounded-xl p-3">
+									{services.map(({ label, href }, i) => (
+										<li key={i}>
+											<Link
+												href={href}
+												className="block px-4 py-2 hover:bg-white/5 hover:text-blue-400 rounded-lg transition-colors text-sm text-gray-200"
+												onClick={closeDesktopDropdown}
+											>
+												{label}
+											</Link>
+										</li>
+									))}
+								</ul>
+							</div>
 						</li>
 
 						<li>

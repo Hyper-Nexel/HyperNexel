@@ -85,7 +85,6 @@ const Footer = () => {
 						<h4 className="text-sm font-semibold text-white mb-4">
 							Pages
 						</h4>
-						q
 						<ul className="space-y-2 text-sm">
 							{pages.map((p) => (
 								<li key={p.name}>
