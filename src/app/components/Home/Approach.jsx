@@ -35,49 +35,55 @@ const approachCards = [
 
 const Approach = () => {
   return (
-    <section className="relative bg-gray-950 text-white py-16 md:py-10 px-6 sm:px-10 lg:px-16 overflow-hidden">
-      {/* Optional: Subtle Background Gradients/Shapes for depth - can be reused from Services or new ones */}
-      <div className="absolute inset-0 opacity-20 z-0">
-        <div className="absolute bottom-0 left-1/3 w-80 h-80 bg-cyan-500 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob animation-delay-4000" />
-        <div className="absolute bottom-1/4 right-1/3 w-80 h-80 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob animation-delay-6000" />
+    <section className="relative bg-transparent text-white py-24 px-6 sm:px-10 lg:px-16 overflow-hidden">
+      {/* Refined Background Gradients */}
+      <div className="absolute inset-0 z-0 pointer-events-none select-none">
+        <div className="absolute bottom-0 left-1/4 w-[600px] h-[600px] bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-cyan-900/10 via-transparent to-transparent opacity-50" />
+        <div className="absolute top-1/4 right-1/4 w-[800px] h-[800px] bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-violet-900/10 via-transparent to-transparent opacity-40" />
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto">
         {/* Section Heading */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-extrabold leading-tight tracking-tight mb-4">
+        <div className="text-center mb-20">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight mb-6">
             Our{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-violet-600">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-500 to-violet-600">
               Approach
             </span>
           </h2>
-          <p className="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto">
+          <p className="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto font-light leading-relaxed">
             A thoughtful, scalable, and performance-driven methodology built to
-            fuel growth and clarity at every stage.
+            fuel growth and absolute clarity at every stage.
           </p>
         </div>
 
         {/* Cards Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           {approachCards.map((card, index) => (
             <div
               key={index}
-              className="group relative bg-gray-900 rounded-2xl p-6 md:p-8 flex flex-col items-start border border-gray-800
-                         hover:border-purple-600 hover:shadow-2xl hover:shadow-purple-900/40 transition-all duration-300 ease-in-out
-                         transform hover:-translate-y-2"
+              className="group relative bg-white/[0.02] backdrop-blur-md rounded-3xl p-8 md:p-10 flex flex-col items-start border border-white/[0.05]
+                         hover:border-cyan-500/30 hover:bg-white/[0.04] transition-all duration-500 ease-out
+                         transform hover:-translate-y-2 overflow-hidden"
             >
-              {/* Optional: Glowing border effect on hover for the card itself */}
-              <div className="absolute inset-0 rounded-2xl pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <div className="absolute inset-px rounded-2xl bg-gradient-to-br from-cyan-500 via-violet-600 to-indigo-700 blur-sm" />
+              {/* Subtle hover gradient background */}
+              <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 via-violet-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+
+              {/* Number Watermark */}
+              <div className="absolute -top-4 -right-2 text-[120px] font-extrabold text-white/[0.03] group-hover:text-cyan-400/[0.05] transition-colors duration-500 pointer-events-none select-none">
+                {String(index + 1).padStart(2, "0")}
               </div>
 
-              <h3 className="relative z-10 text-xl font-bold text-white mb-3 transition-all duration-300 group-hover:text-cyan-300">
+              <h3 className="relative z-10 text-2xl font-bold text-white mb-4 transition-colors duration-300 group-hover:text-cyan-300">
                 {card.title}
               </h3>
 
-              <p className="relative z-10 text-base text-gray-400 group-hover:text-white leading-relaxed flex-grow">
+              <p className="relative z-10 text-base text-gray-400 leading-relaxed font-light group-hover:text-gray-300 transition-colors duration-300 flex-grow">
                 {card.description}
               </p>
+              
+              {/* Decorative Line */}
+              <div className="relative z-10 mt-8 w-12 h-[2px] bg-white/10 group-hover:w-full group-hover:bg-gradient-to-r group-hover:from-cyan-500 group-hover:to-violet-600 transition-all duration-500"></div>
             </div>
           ))}
         </div>

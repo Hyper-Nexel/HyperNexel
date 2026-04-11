@@ -80,20 +80,26 @@ const Navbar = () => {
 			<nav
 				style={{
 					position: "fixed",
-					top: 0,
-					left: 0,
-					right: 0,
+					top: scrolled ? "1rem" : "0",
+					left: scrolled ? "50%" : "0",
+					right: scrolled ? "auto" : "0",
 					zIndex: 50,
-					transform: visible ? "translateY(0)" : "translateY(-100%)",
-					transition: "transform 0.35s cubic-bezier(0.4, 0, 0.2, 1)",
-					backgroundColor: "rgba(0, 0, 0, 0.7)",
-					backdropFilter: "blur(16px) saturate(180%)",
-					WebkitBackdropFilter: "blur(16px) saturate(180%)",
-					boxShadow: "0 4px 24px rgba(0,0,0,0.3)",
-					borderBottom: "1px solid rgba(255,255,255,0.1)",
+					transform: scrolled 
+						? (visible ? "translateX(-50%) translateY(0)" : "translateX(-50%) translateY(-150%)") 
+						: (visible ? "translateY(0)" : "translateY(-100%)"),
+					width: scrolled ? "calc(100% - 2rem)" : "100%",
+					maxWidth: scrolled ? "1200px" : "100%",
+					transition: "all 0.4s cubic-bezier(0.4, 0, 0.2, 1)",
+					backgroundColor: scrolled ? "rgba(10, 10, 15, 0.85)" : "rgba(0, 0, 0, 0.5)",
+					backdropFilter: "blur(20px) saturate(200%)",
+					WebkitBackdropFilter: "blur(20px) saturate(200%)",
+					boxShadow: scrolled ? "0 8px 32px rgba(0, 0, 0, 0.5)" : "0 4px 24px rgba(0,0,0,0.1)",
+					border: scrolled ? "1px solid rgba(255, 255, 255, 0.1)" : "1px solid transparent",
+					borderBottom: scrolled ? "1px solid rgba(255, 255, 255, 0.1)" : "1px solid rgba(255,255,255,0.05)",
+					borderRadius: scrolled ? "100px" : "0",
 				}}
 			>
-				<div className="max-w-7xl mx-auto px-6 py-2 flex justify-between items-center">
+				<div className={`mx-auto px-6 py-2 flex justify-between items-center transition-all duration-300 ${scrolled ? 'max-w-[1200px]' : 'max-w-7xl'}`}>
 					{/* Logo */}
 					<Link
 						href="/"
@@ -108,21 +114,23 @@ const Navbar = () => {
 					</Link>
 
 					{/* Desktop Menu */}
-					<ul className="hidden md:flex space-x-8 items-center font-medium text-white">
+					<ul className="hidden md:flex space-x-8 items-center text-[15px] font-medium text-gray-200">
 						<li>
 							<Link
 								href="/"
-								className="hover:text-blue-400 transition-colors"
+								className="relative group hover:text-white transition-colors"
 							>
 								Home
+								<span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-gradient-to-r from-blue-400 to-purple-500 transition-all duration-300 group-hover:w-full"></span>
 							</Link>
 						</li>
 						<li>
 							<Link
 								href="/about"
-								className="hover:text-blue-400 transition-colors"
+								className="relative group hover:text-white transition-colors"
 							>
 								About
+								<span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-gradient-to-r from-blue-400 to-purple-500 transition-all duration-300 group-hover:w-full"></span>
 							</Link>
 						</li>
 						<li
@@ -131,7 +139,7 @@ const Navbar = () => {
 							onMouseLeave={() => setDesktopDropdownOpen(false)}
 						>
 							<div
-								className="flex items-center text-white hover:text-blue-400 cursor-pointer transition-colors"
+								className="flex items-center text-gray-200 hover:text-white cursor-pointer transition-colors relative group"
 								onClick={toggleDesktopDropdown}
 							>
 								<span>Services</span>
@@ -140,11 +148,12 @@ const Navbar = () => {
 										desktopDropdownOpen ? "rotate-180" : ""
 									}`}
 								/>
+								<span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-gradient-to-r from-blue-400 to-purple-500 transition-all duration-300 group-hover:w-full"></span>
 							</div>
 
 							{/* Desktop Services Dropdown */}
 							<ul
-								className={`absolute top-full left-0 bg-white/80 backdrop-blur-md shadow-lg rounded-lg p-2 w-60 transition duration-150 z-50
+								className={`absolute top-full -left-4 mt-4 bg-gray-950/80 backdrop-blur-xl border border-white/10 shadow-2xl rounded-xl p-3 w-64 transition-all duration-300 z-50
                 ${
 							desktopDropdownOpen
 								? "opacity-100 pointer-events-auto"
@@ -155,7 +164,7 @@ const Navbar = () => {
 									<li key={i}>
 										<Link
 											href={href}
-											className="block px-4 py-2 hover:bg-blue-50 hover:text-blue-600 rounded-md"
+											className="block px-4 py-2 hover:bg-white/5 hover:text-blue-400 rounded-lg transition-colors text-sm text-gray-200"
 											onClick={closeDesktopDropdown}
 										>
 											{label}
@@ -168,17 +177,19 @@ const Navbar = () => {
 						<li>
 							<Link
 								href="/testimonials"
-								className="hover:text-blue-400 transition-colors"
+								className="relative group hover:text-white transition-colors"
 							>
 								Testimonials
+								<span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-gradient-to-r from-blue-400 to-purple-500 transition-all duration-300 group-hover:w-full"></span>
 							</Link>
 						</li>
 						<li>
 							<Link
 								href="/contact"
-								className="hover:text-blue-400 transition-colors"
+								className="relative group hover:text-white transition-colors"
 							>
 								Contact
+								<span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-gradient-to-r from-blue-400 to-purple-500 transition-all duration-300 group-hover:w-full"></span>
 							</Link>
 						</li>
 					</ul>

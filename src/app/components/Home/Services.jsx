@@ -56,59 +56,64 @@ const Services = () => {
   return (
     <section
       id="services"
-      className="relative bg-gray-950 text-white md:py-10 px-6 sm:px-10 lg:px-16 overflow-hidden"
+      className="relative bg-transparent text-white py-24 px-6 sm:px-10 lg:px-16 overflow-hidden"
     >
-      {/* Decorative blobs */}
-      <div className="absolute inset-0 opacity-20 z-0 pointer-events-none select-none">
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob" />
-        <div className="absolute top-1/2 right-1/4 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob animation-delay-2000" />
+      {/* Decorative background */}
+      <div className="absolute inset-0 z-0 pointer-events-none select-none">
+        <div className="absolute top-0 left-1/4 w-[800px] h-[800px] bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-purple-900/10 via-transparent to-transparent opacity-50" />
+        <div className="absolute top-1/2 right-0 w-[600px] h-[600px] bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-blue-900/10 via-transparent to-transparent opacity-50" />
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto">
         {/* Heading */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-extrabold leading-tight tracking-tight mb-4">
+        <div className="text-center mb-20">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight mb-6">
             Our{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-600">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-500">
               Core Services
             </span>
           </h2>
-          <p className="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto">
-            Digital solutions designed to elevate your business and drive
-            tangible results.
+          <p className="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto font-light leading-relaxed">
+            Digital solutions intelligently designed to elevate your brand and drive tangible, lasting results.
           </p>
         </div>
 
         {/* Services grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 md:gap-10 ali">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           {servicesData.map((service, index) => (
             <a
               key={index}
               href={service.href}
               aria-label={`Learn more about ${service.title}`}
-              className="group relative bg-gray-900 rounded-2xl p-6 md:p-8 flex flex-col items-start border border-gray-800 hover:border-blue-600 hover:shadow-2xl hover:shadow-blue-900/40 transition-all duration-300 ease-in-out transform hover:-translate-y-2 focus:outline-none focus:ring-2 focus:ring-blue-600"
+              className="group relative bg-white/[0.02] backdrop-blur-md rounded-3xl p-8 md:p-10 flex flex-col items-start border border-white/[0.05] hover:border-blue-500/30 hover:bg-white/[0.04] transition-all duration-500 ease-out transform hover:-translate-y-2 overflow-hidden"
             >
-              {/* Glow border */}
-              <div className="absolute inset-0 rounded-2xl pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <div className="absolute inset-px rounded-2xl bg-gradient-to-br from-blue-500 via-purple-600 to-indigo-700 blur-sm" />
-              </div>
+              {/* Subtle hover gradient background */}
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 via-purple-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
               {/* Icon */}
-              <div className="relative z-10 flex justify-center items-center size-14 bg-gray-800 rounded-lg mb-6 group-hover:bg-gradient-to-br group-hover:from-blue-600 group-hover:to-purple-700 transition-all duration-300 ease-in-out transform group-hover:scale-110">
-                <span className="text-2xl" role="img" aria-hidden="true">
+              <div className="relative z-10 flex justify-center items-center w-16 h-16 bg-white/[0.05] border border-white/10 rounded-2xl mb-8 group-hover:bg-blue-500/20 group-hover:border-blue-400/30 transition-all duration-500">
+                <span className="text-3xl filter drop-shadow-md" role="img" aria-hidden="true">
                   {service.icon}
                 </span>
+                {/* Glow effect behind icon */}
+                <div className="absolute inset-0 bg-blue-400/20 blur-xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
               </div>
 
               {/* Title */}
-              <h3 className="relative z-10 text-xl font-bold text-white mb-3 transition-colors duration-300 group-hover:text-cyan-300">
+              <h3 className="relative z-10 text-2xl font-bold text-white mb-4 group-hover:text-blue-300 transition-colors duration-300">
                 {service.title}
               </h3>
 
               {/* Description */}
-              <p className="relative z-10 text-base text-gray-400 group-hover:text-white leading-relaxed flex-grow">
+              <p className="relative z-10 text-base text-gray-400 leading-relaxed font-light group-hover:text-gray-300 transition-colors duration-300">
                 {service.description}
               </p>
+
+              {/* Explore Button */}
+              <div className="relative z-10 mt-auto pt-8 flex items-center text-sm font-semibold text-blue-400 opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500">
+                Explore Service 
+                <svg className="w-4 h-4 ml-2 transform group-hover:translate-x-2 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+              </div>
             </a>
           ))}
         </div>

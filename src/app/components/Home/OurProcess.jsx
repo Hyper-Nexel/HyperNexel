@@ -26,55 +26,56 @@ const steps = [
 
 const OurProcess = () => {
   return (
-    <section className="relative bg-gray-950 text-white py-10 px-6 sm:px-10 lg:px-16 overflow-hidden">
-      {/* Optional: Subtle Background Gradients/Shapes for depth */}
-      <div className="absolute inset-0 opacity-20 z-0">
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob animation-delay-3000" />
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob animation-delay-5000" />
+    <section className="relative bg-transparent text-white py-24 px-6 sm:px-10 lg:px-16 overflow-hidden">
+      {/* Refined Background Gradients */}
+      <div className="absolute inset-0 z-0 pointer-events-none select-none">
+        <div className="absolute top-1/2 left-1/4 w-[600px] h-[600px] bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-indigo-900/10 via-transparent to-transparent opacity-50 -translate-y-1/2" />
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-extrabold leading-tight tracking-tight mb-4">
+        <div className="text-center mb-24">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight mb-6">
             From Idea to{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-600">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-500">
               Launch
             </span>
           </h2>
-          <p className="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto">
-            Our process is streamlined for clarity, speed, and results — every
-            step tailored to your goals.
+          <p className="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto font-light leading-relaxed">
+            Our process is streamlined for clarity, speed, and absolute quality — every
+            step tailored perfectly to your goals.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-10">
-          {steps.map((step, index) => (
-            <div
-              key={index}
-              className="group relative bg-gray-900 rounded-2xl shadow-lg p-6 md:p-8 flex flex-col items-center text-center
-                         border border-gray-800 hover:border-blue-600 hover:shadow-2xl hover:shadow-blue-900/40
-                         transition-all duration-300 ease-in-out transform hover:-translate-y-2"
-            >
-              {/* Optional: Glowing border effect on hover for the card itself */}
-              <div className="absolute inset-0 rounded-2xl pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <div className="absolute inset-px rounded-2xl bg-gradient-to-br from-blue-500 via-purple-600 to-indigo-700 blur-sm" />
-              </div>
-
+        <div className="relative">
+          {/* Horizontal connecting line for desktop */}
+          <div className="hidden lg:block absolute top-[2.5rem] left-[10%] right-[10%] h-[1px] bg-gradient-to-r from-transparent via-blue-500/20 to-transparent z-0"></div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
+            {steps.map((step, index) => (
               <div
-                className="relative z-10 w-16 h-16 mb-6 flex items-center justify-center rounded-full bg-gray-800 text-3xl font-bold
-                           text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-600
-                           group-hover:scale-110 group-hover:shadow-xl transition-all duration-300 ease-in-out"
+                key={index}
+                className="group relative flex flex-col items-center text-center z-10"
               >
-                {index + 1}
+                {/* Glowing Step Number */}
+                <div
+                  className="relative w-20 h-20 mb-8 flex items-center justify-center rounded-2xl bg-gray-950 border border-white/10
+                             text-2xl font-bold text-white shadow-xl
+                             group-hover:-translate-y-2 group-hover:bg-white/[0.02] group-hover:border-blue-500/40 transition-all duration-500 ease-out"
+                >
+                  {/* Subtle Glow */}
+                  <div className="absolute inset-0 bg-blue-500/20 blur-xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
+                  0{index + 1}
+                </div>
+
+                <h3 className="relative z-10 text-xl font-bold text-white mb-4 group-hover:text-blue-300 transition-colors duration-300">
+                  {step.title}
+                </h3>
+                <p className="relative z-10 text-base text-gray-400 leading-relaxed font-light px-2 group-hover:text-gray-300 transition-colors duration-300">
+                  {step.description}
+                </p>
               </div>
-              <h3 className="relative z-10 text-xl font-bold text-white mb-3">
-                {step.title}
-              </h3>
-              <p className="relative z-10 text-base text-gray-400 leading-relaxed">
-                {step.description}
-              </p>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </section>
