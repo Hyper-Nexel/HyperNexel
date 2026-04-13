@@ -11,7 +11,7 @@ const projects = [
 			"Real-time analytics and reporting system",
 			"Responsive UI optimized for UAE operations",
 		],
-		link: "#",
+		link: "https://www.capitalmotion.com/",
 	},
 	{
 		name: "SoSocial",
@@ -23,7 +23,7 @@ const projects = [
 			"Performance insights and campaign tracking",
 			"Clean UI with dynamic data visualization",
 		],
-		link: "#",
+		link: "https://uat-web.sosocial.com/",
 	},
 	{
 		name: "ICP Montessori Institutions",
@@ -85,7 +85,8 @@ const FeaturedProjects = () => {
 					</h2>
 					<p className="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto font-light leading-relaxed">
 						From e‑commerce storefronts to scalable portals — we craft
-						digital products that perform flawlessly and look gorgeous doing it.
+						digital products that perform flawlessly and look gorgeous
+						doing it.
 					</p>
 				</div>
 				{/* Projects grid */}
@@ -120,7 +121,10 @@ const FeaturedProjects = () => {
 								{/* Tools Pills */}
 								<div className="flex flex-wrap gap-2 mb-6">
 									{project.tools.map((tool, tIndex) => (
-										<span key={tIndex} className="px-3 py-1 text-xs font-medium bg-white/[0.05] border border-white/10 rounded-full text-gray-300 group-hover:border-blue-500/30 transition-colors duration-300">
+										<span
+											key={tIndex}
+											className="px-3 py-1 text-xs font-medium bg-white/[0.05] border border-white/10 rounded-full text-gray-300 group-hover:border-blue-500/30 transition-colors duration-300"
+										>
 											{tool}
 										</span>
 									))}
@@ -129,7 +133,9 @@ const FeaturedProjects = () => {
 								<ul className="text-sm font-light text-gray-400 space-y-2 mb-6 flex-grow">
 									{project.highlights.map((point, i) => (
 										<li key={i} className="flex items-start">
-											<span className="mr-2 text-blue-400 mt-0.5">•</span>
+											<span className="mr-2 text-blue-400 mt-0.5">
+												•
+											</span>
 											<span>{point}</span>
 										</li>
 									))}
@@ -145,7 +151,19 @@ const FeaturedProjects = () => {
 										aria-label={`Visit live site: ${project.name}`}
 									>
 										View Site
-										<svg className="w-4 h-4 ml-2 transform group-hover/btn:translate-x-1 group-hover/btn:-translate-y-1 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+										<svg
+											className="w-4 h-4 ml-2 transform group-hover/btn:translate-x-1 group-hover/btn:-translate-y-1 transition-transform duration-300"
+											fill="none"
+											viewBox="0 0 24 24"
+											stroke="currentColor"
+										>
+											<path
+												strokeLinecap="round"
+												strokeLinejoin="round"
+												strokeWidth={2}
+												d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+											/>
+										</svg>
 									</a>
 								</div>
 							</div>
